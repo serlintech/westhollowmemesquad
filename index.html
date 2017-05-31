@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html>
 <Body>
+ <script>
+ function disableSubmit() {
+  document.getElementById("submit").disabled = true;
+ }
+
+  function activateButton(element) {
+
+      if(element.checked) {
+        document.getElementById("submit").disabled = false;
+       }
+       else  {
+        document.getElementById("submit").disabled = true;
+      }
+
+  }
+</script>
+
+
+<body onload="disableSubmit()">
+ <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  I Agree Terms & Coditions
+<br><br>
+  <input type="submit" name="submit" id="submit">
  
 <!--starts here-->  
   <nav>
